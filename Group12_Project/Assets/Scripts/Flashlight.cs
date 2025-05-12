@@ -13,6 +13,8 @@ public class Flashlight : MonoBehaviour
     public GameObject ON;
     public GameObject OFF;
     private bool isON;
+
+    public AudioSource toggleAudio;
     
 
 
@@ -44,6 +46,11 @@ public class Flashlight : MonoBehaviour
             }
 
             isON = !isON;
+
+            if (toggleAudio != null)
+            {
+                toggleAudio.Play();
+            }
         }
     }
 
