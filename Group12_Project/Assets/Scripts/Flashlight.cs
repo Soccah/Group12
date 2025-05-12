@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 /// <summary>
 /// Olivia Foster
 /// 5/11/25
-/// Flashlight turn on and off with 'F' key; also flickers with invokerepeater
+/// Flashlight turn on and off with 'F' key
 /// </summary>
 
 public class Flashlight : MonoBehaviour
@@ -12,6 +13,7 @@ public class Flashlight : MonoBehaviour
     public GameObject ON;
     public GameObject OFF;
     private bool isON;
+    
 
 
     // Start is called before the first frame update
@@ -20,6 +22,8 @@ public class Flashlight : MonoBehaviour
         ON.SetActive(false);
         OFF.SetActive(true);
         isON = false;
+
+        
     }
 
     // Update is called once per frame
@@ -42,4 +46,6 @@ public class Flashlight : MonoBehaviour
             isON = !isON;
         }
     }
+
+    
 }
