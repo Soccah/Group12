@@ -13,7 +13,10 @@ public class TitleScreen : MonoBehaviour
 {
     public GameObject controlsPanel;
     public GameObject backButton;
-    public GameObject titleScreenPanel;
+    public GameObject titleText;
+    public GameObject startGameButton;
+    public GameObject quitButton;
+    public GameObject controlsButton;
 
     private void Start()
     {
@@ -29,14 +32,20 @@ public class TitleScreen : MonoBehaviour
     {
         controlsPanel.SetActive(true);
         backButton.SetActive(true);
-        titleScreenPanel.SetActive(false);
+        titleText.SetActive(false);
+        startGameButton.SetActive(false);
+        quitButton.SetActive(false);
+        controlsButton.SetActive(false);
     }
 
     public void HideControls()
     {
         controlsPanel.SetActive(false);
         backButton.SetActive(false);
-        titleScreenPanel.SetActive(true);
+        titleText.SetActive(true);
+        startGameButton.SetActive(true);
+        quitButton.SetActive(true);
+        controlsButton.SetActive(true);
     }
 
     public void QuitGame()
