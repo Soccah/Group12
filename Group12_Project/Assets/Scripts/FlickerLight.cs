@@ -11,6 +11,8 @@ public class FlickerLight : MonoBehaviour
 {
         public Light theLight;
         public float repeatRate = 0.5f; // How often to toggle (seconds)
+        public AudioSource lightOnAudio;
+        
 
         void Start()
         {
@@ -21,8 +23,15 @@ public class FlickerLight : MonoBehaviour
         {
             if (theLight != null)
             {
-                theLight.enabled = !theLight.enabled; // Toggle the light's enabled state
+                theLight.enabled = !theLight.enabled;
+
+                if(theLight.enabled && lightOnAudio != null)
+                {
+                    lightOnAudio.Play();
+                }
+            
             }
+
         }
 
         void OnDisable()
