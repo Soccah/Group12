@@ -17,5 +17,17 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         Debug.Log("Player Health: " + currentHealth);
+
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        GameOverManager.Instance.ShowGameOver();
+        GetComponent<PlayerMovement>().enabled = false;
+        
     }
 }

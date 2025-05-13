@@ -460,7 +460,10 @@ MonoBehaviour:
     - LCtrl
 
 
-    Toggle Flashlight - F'
+    Toggle Flashlight - F
+
+
+    Interact Door - E'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c66c895aaab9144bb4d320921160547, type: 2}
   m_sharedMaterial: {fileID: -7107941643582079513, guid: 2c66c895aaab9144bb4d320921160547, type: 2}
